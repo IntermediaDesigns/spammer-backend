@@ -1,4 +1,4 @@
-// File: /Volumes/1 TB Dev/Documents/GitHub/spammer-backend/spammer-backend/src/app/layout.js
+// File: /Volumes/1 TB Dev/Documents/GitHub/spammer-backend/src/app/layout.js
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

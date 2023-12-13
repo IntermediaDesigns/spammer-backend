@@ -11,12 +11,6 @@ export async function GET(request, response) {
       },
     });
 
-    if (comments.length === 0) {
-      return NextResponse.json({
-        success: false,
-        message: "No comments in that post.",
-      });
-    }
 
     return NextResponse.json({ success: true, comments });
   } catch (error) {
@@ -27,9 +21,10 @@ export async function GET(request, response) {
 
 export async function POST(request, response) {
        try {
-         const { postId, text } = await request.json();
+        const {postId} = response.params;
+         const { text } = await request.json();
      
-         if (!postId || !text) {
+         if (!text) {
            return NextResponse.json({
              success: false,
              error: "You must provide a post ID and a comment.",

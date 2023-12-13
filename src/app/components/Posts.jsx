@@ -49,18 +49,18 @@ export default function Posts({ post }) {
       return;
     }
 
-    const response = await fetch(`/api/posts/${id}/comments`, {
+    const response = await fetch(`/api/posts/${post.id}/comments`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ text: comment }),
     });
-
+console.log(response)
     if (!response.ok) {
       throw new Error('Error posting comment');
     }
-
+    
     router.refresh();
     setComment('');
     setShowCommentBox(false);
@@ -85,7 +85,7 @@ export default function Posts({ post }) {
     if (!response.ok) {
       throw new Error('Error editing post');
     }
-
+    
     router.refresh();
     setIsEditing(false);
     setErrorMessage('');
