@@ -1,5 +1,1 @@
-{
-  "/page": "app/page.js",
-  "/api/posts/[postId]/comments/route": "app/api/posts/[postId]/comments/route.js",
-  "/api/posts/[postId]/likes/route": "app/api/posts/[postId]/likes/route.js"
-}
+{}
