@@ -14,10 +14,12 @@ export default function Posts({ post }) {
   const [errorMessage, setErrorMessage] = useState('');
   const router = useRouter();
 
-  const likePost = async (id) => {
-    const response = await fetch(`/api/posts/${id}/likes`, {
+  const likePost = async () => {
+    const response = await fetch(`/api/posts/${post.id}/likes`, {
       method: 'POST',
     });
+    const info = await response.json()
+    console.log(info)
 
     if (!response.ok) {
       throw new Error('Error liking post');
@@ -29,8 +31,8 @@ export default function Posts({ post }) {
   };
 
   // DELETE function
-  const deletePost = async (id) => {
-    const response = await fetch(`/api/posts/${id}`, {
+  const deletePost = async () => {
+    const response = await fetch(`/api/posts/${post.id}`, {
       method: 'DELETE',
     });
 
@@ -43,7 +45,7 @@ export default function Posts({ post }) {
 
   // Post a comment function
 
-  const postComment = async (id) => {
+  const postComment = async () => {
     if (comment.trim() === '') {
       setErrorMessage('Please enter a comment before posting.');
       return;
@@ -68,13 +70,13 @@ console.log(response)
   };
 
   // Edit post function
-  const editPost = async (id) => {
+  const editPost = async () => {
     if (editedText === post.text) {
       setErrorMessage('No changes were made to the post.');
       return;
     }
 
-    const response = await fetch(`/api/posts/${id}`, {
+    const response = await fetch(`/api/posts/${post.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

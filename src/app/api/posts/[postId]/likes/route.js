@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server.js';
 
 export async function POST(request, response) {
        try {
-         const { postId } = await request.json();
+         const { postId } = response.params;
      
          if (!postId) {
            return NextResponse.json({
