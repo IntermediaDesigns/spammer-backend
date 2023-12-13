@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "prisma": "^5.7.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.7.0",
+    "next": "^14.0.4"
+  },
+  "name": "spammer-backend",
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "version": "1.0.0",
+  "main": "next.config.js",
+  "scripts": {
+    "dev": "next dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}
