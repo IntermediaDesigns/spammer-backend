@@ -5,7 +5,7 @@ export async function GET() {
   
   const posts = await prisma.post.findMany({
     orderBy: {
-      createdAt: "asc",
+      createdAt: "desc",
     },
   });
 

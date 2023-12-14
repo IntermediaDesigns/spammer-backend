@@ -12,7 +12,7 @@ export async function GET(request, response) {
     if (!post) {
       return NextResponse.json({
         success: false,
-        message: 'No post with that ID found.',
+        error: 'No post with that ID found.',
       });
     }
     return NextResponse.json({ success: true, post });
@@ -33,7 +33,7 @@ export async function PUT(request, response) {
     if (!post) {
       return NextResponse.json({
         success: false,
-        message: "No post with that ID found.",
+        error: "No post with that ID found.",
       });
     }
 
@@ -61,7 +61,7 @@ export async function DELETE(request, response) {
     if (!post) {
       return NextResponse.json({
         success: false,
-        message: "No post with that ID found.",
+        error: "No post with that ID found.",
       });
     }
 

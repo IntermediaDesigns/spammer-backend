@@ -3,7 +3,11 @@ import Posts from './Posts.jsx';
 
 export default async function GetPosts() {
  
-  const posts = await prisma.post.findMany()
+  const posts = await prisma.post.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  })
 
   return (
     <div>
