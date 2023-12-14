@@ -2,6 +2,8 @@ import GetPosts from './components/GetPosts.jsx'
 import NewPosts from './components/NewPosts.jsx'
 import styles from './page.module.css'
 
+export const dynamic = 'force-dynamic'
+
 export default function Home() {
   return (
     <>
