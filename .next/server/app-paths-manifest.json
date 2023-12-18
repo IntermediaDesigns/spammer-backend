@@ -1,4 +1,5 @@
 {
-  "/api/posts/[postId]/comments/route": "app/api/posts/[postId]/comments/route.js",
-  "/page": "app/page.js"
+  "/not-found": "app/not-found.js",
+  "/page": "app/page.js",
+  "/api/posts/[postId]/comments/route": "app/api/posts/[postId]/comments/route.js"
 }
